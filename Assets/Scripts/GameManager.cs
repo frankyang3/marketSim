@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
+    public GameObject titleScreen;
 
     private int time = 60;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         isGameActive = true;
         UpdateTimer(time);
         StartCoroutine(KeepTime());
+        titleScreen.SetActive(false);
 
     }
 
