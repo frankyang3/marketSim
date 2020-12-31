@@ -13,7 +13,7 @@ public class StartButton : MonoBehaviour
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         button = GetComponent<Button>();
-        //button.onClick.AddListener(Begin);
+        button.onClick.AddListener(Begin);
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class StartButton : MonoBehaviour
 
     void Begin()
     {
-       // gameManager.StartGame();
+        gameManager.StartGame();
     }
 }
