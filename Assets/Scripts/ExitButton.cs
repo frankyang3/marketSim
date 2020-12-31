@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class ExitButton : MonoBehaviour
 {
     private Button button;
+    public GameObject titleScreen;
+    public GameObject gameOverScreen;
     // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(ExitGame);
+        button.onClick.AddListener(ExitToTitle);
     }
 
     // Update is called once per frame
@@ -19,10 +21,11 @@ public class ExitButton : MonoBehaviour
         
     }
 
-    void ExitGame()
+    void ExitToTitle()
     {
-        Application.Quit();
-        Debug.Log("Game is exiting");
+        Debug.Log("ada");
+        titleScreen.SetActive(true);
+        gameOverScreen.SetActive(false);
     }
 }
     
