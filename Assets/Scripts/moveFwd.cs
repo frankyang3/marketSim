@@ -16,7 +16,7 @@ public class moveFwd : MonoBehaviour
     void Update()
     {
 
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.left * Time.deltaTime * speed);
 
     }
 }
