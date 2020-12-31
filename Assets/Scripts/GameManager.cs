@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
 
     private int time = 60;
+    private int playerGold;
 
     public bool isGameActive;
 
@@ -48,14 +49,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateScore(int scoreToAdd)
+    public void UpdateScore()
     {
-        //playerGold += scoreToAdd; TODO: temporary variable, need simond to modify/unite it
-        //scoreText.text = "Score: " + playerGold; // TODO: temporary variable, need simond to modify/unite it
-        //if (playerGold > 1000 || playerGold < 1)
-        //{
-        //    gameOver();
-        //}
+        playerGold = PlayerController.playerGold;
+        scoreText.text = "Score: " + playerGold;
+        if (playerGold > 1000 || playerGold < 1)
+        {
+            //gameOver();
+        }
     }
 
     public void UpdateTimer(int timeRemaining)

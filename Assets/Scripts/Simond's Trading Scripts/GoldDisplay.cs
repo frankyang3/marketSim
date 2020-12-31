@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoldDisplay : MonoBehaviour
 {
-    private static int playerGold;
+    private int playerGold;
     public Text playerGoldText;
     // Start is called before the first frame update
     void Start()
