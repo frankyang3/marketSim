@@ -2578,7 +2578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
-  titleScreen: {fileID: 0}
+  titleScreen: {fileID: 538046968}
   isGameActive: 0
 --- !u!4 &2130937670
 Transform:
