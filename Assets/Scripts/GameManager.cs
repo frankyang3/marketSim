@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
 
-    public int playerGold; // temporary variable, need simond to modify/unite it
     private int time = 60;
 
     public bool isGameActive;
@@ -29,7 +28,7 @@ public class GameManager : MonoBehaviour
 
             if (time < 0)
             {
-                GameOver();
+                //GameOver();
             }
             else
             {
@@ -40,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int scoreToAdd)
     {
-        playerGold += scoreToAdd;
-        scoreText.text = "Score: " + playerGold;
+        //playerGold += scoreToAdd; temporary variable, need simond to modify/unite it
+        //scoreText.text = "Score: " + playerGold; // temporary variable, need simond to modify/unite it
     }
 
     public void UpdateTimer(int timeRemaining)
