@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class BuyButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int buyAmount = 1; // later use get component of the trader and change to private
+    public GameObject playerGold;
+    public void reducePlayerGold()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
