@@ -25,10 +25,9 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
+        titleScreen.SetActive(false);
         UpdateTimer(time);
         StartCoroutine(KeepTime());
-        titleScreen.SetActive(false);
-
     }
 
     IEnumerator KeepTime()
