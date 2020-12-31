@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+    {
+        
+    }
+
+    public void StartGame()
     {
         UpdateTimer(time);
         StartCoroutine(KeepTime());
@@ -39,8 +46,12 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int scoreToAdd)
     {
-        //playerGold += scoreToAdd; temporary variable, need simond to modify/unite it
-        //scoreText.text = "Score: " + playerGold; // temporary variable, need simond to modify/unite it
+        //playerGold += scoreToAdd; TODO: temporary variable, need simond to modify/unite it
+        //scoreText.text = "Score: " + playerGold; // TODO: temporary variable, need simond to modify/unite it
+        //if (playerGold > 1000 || playerGold < 1)
+        //{
+        //    gameOver();
+        //}
     }
 
     public void UpdateTimer(int timeRemaining)
@@ -48,9 +59,22 @@ public class GameManager : MonoBehaviour
         timerText.text = "Time: " + timeRemaining;
     }
 
+    public void GameOver()
+    {
+        //gameOverText.gameObject.SetActive(true); TODO: need adam to check
+        //restartButton.gameObject.SetActive(true); TODO: need adam to check
+        isGameActive = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    // Restart game by reloading the scene
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
