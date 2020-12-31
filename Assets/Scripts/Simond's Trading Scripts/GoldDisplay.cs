@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoldDisplay : MonoBehaviour
 {
-    public int playerGold;
+    private static int playerGold;
     public Text playerGoldText;
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,14 @@ public class GoldDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerGold = PlayerController.playerGold;
+
         playerGoldText.text = "Gold: " + playerGold;
 
         // Testing if its changable
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerGold--;
+            PlayerController.playerGold--;
         }
     }
 }

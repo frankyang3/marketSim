@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator playerAnim;
     private GameManager gameManagerScript;
+    public static int playerGold = 10;
     // Start is called before the first frame update
     void Start()
     {
