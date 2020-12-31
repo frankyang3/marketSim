@@ -23,13 +23,10 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("ASDFSASD");
         isGameActive = true;
         titleScreen.SetActive(false);
         UpdateTimer(time);
         StartCoroutine(KeepTime());
-        
-
     }
 
     IEnumerator KeepTime()
