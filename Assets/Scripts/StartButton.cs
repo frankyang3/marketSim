@@ -7,7 +7,6 @@ public class StartButton : MonoBehaviour
 {
     private Button button;
     private GameManager gameManager;
-    public bool ison;
 
     // Start is called before the first frame update
     void Start()
