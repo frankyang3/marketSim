@@ -22,8 +22,10 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        isGameActive = true;
         UpdateTimer(time);
         StartCoroutine(KeepTime());
+
     }
 
     IEnumerator KeepTime()
