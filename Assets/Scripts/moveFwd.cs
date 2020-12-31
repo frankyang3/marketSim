@@ -5,18 +5,20 @@ using UnityEngine;
 public class moveFwd : MonoBehaviour
 {
     private float speed = 15;
-    private PlayerController playerControllerScript;
+    private GameManager gameManagerScript;
     // Start is called before the first frame update
     void Start()
     {
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        transform.Translate(Vector3.left * Time.deltaTime * speed);
-
+        if (gameManagerScript.isGameActive == true)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * speed);
+        }
     }
 }
