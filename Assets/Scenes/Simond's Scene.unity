@@ -596,7 +596,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972ce27b39cb3a04c9cbed28fce7b941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   player: {fileID: 0}
+  offset: {x: -10, y: 3, z: 0}
 --- !u!1 &544972430
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +628,7 @@ GameObject:
   - component: {fileID: 544972434}
   - component: {fileID: 544972433}
   - component: {fileID: 544972432}
+  - component: {fileID: 544972435}
   m_Layer: 5
   m_Name: Buy Button
   m_TagString: Untagged
@@ -633,8 +653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210, y: 100}
-  m_SizeDelta: {x: 165.49353, y: 38.145325}
+  m_AnchoredPosition: {x: -212.4, y: 61.1}
+  m_SizeDelta: {x: 385.1876, y: 74.745804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544972432
 MonoBehaviour:
@@ -676,12 +696,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1399112654}
-        m_MethodName: 
+      - m_Target: {fileID: 1399112656}
+        m_MethodName: reducePlayerGold
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -722,6 +742,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544972430}
   m_CullTransparentMesh: 0
+--- !u!114 &544972435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544972430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyText: {fileID: 565606175}
 --- !u!1 &565606173
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +780,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565606173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -756,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000076293945, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565606175
@@ -999,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyAmount: 1
+  buyText: {fileID: 0}
 --- !u!4 &1399112657
 Transform:
   m_ObjectHideFlags: 0
@@ -1399,5 +1432,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e981410442991774a8e6855bfd229ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGold: 4
   playerGoldText: {fileID: 2082605175}
