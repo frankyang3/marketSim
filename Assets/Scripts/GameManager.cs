@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
             if (time < 0)
             {
-                //GameOver();
+                GameOver();
             }
             else
             {
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + playerGold;
         if (playerGold > 1000 || playerGold < 1)
         {
-            //gameOver();
+            GameOver();
         }
     }
 
