@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManagerScript;
     public static int playerGold = 10;
     public static int playerItem = 3;
+    public GameObject titleScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             playerAnim.SetFloat("Speed_f", 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is false){
+            titleScreen.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is true)
+        {
+            titleScreen.SetActive(false);
         }
     }
 
