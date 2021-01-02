@@ -26,7 +26,6 @@ public class SellButton : MonoBehaviour
         {
             PlayerController.playerGold += sellPrice;
             PlayerController.playerItem--;
-            Debug.Log(PlayerController.playerItem);
             amountBuying--;
             GameObject.Find("Sell Button").GetComponentInChildren<Text>().text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
         }
