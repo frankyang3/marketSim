@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class BuyButton : MonoBehaviour
 {
-    private int buyAmount = 1; // later use get component of the trader and change to private
+    private int buyPrice = 3; // later use get component of the trader and change to private
     private int itemAvailable = 4; // later take the items available from the trader and change to private
     public Text buyText;
     // public string itemName;
 
     private void Start()
     {
-        GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyAmount + "  (" + itemAvailable + " left)";
+        GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
     }
 
     private void Update()
@@ -20,15 +20,14 @@ public class BuyButton : MonoBehaviour
         
     }
 
-    public void reducePlayerGold()
+    public void ReducePlayerGold()
     {
-        if (itemAvailable > 0)
+        if (itemAvailable > 0 && PlayerController.playerGold - buyPrice >= 0)
         {
-            PlayerController.playerGold -= buyAmount;
+            PlayerController.playerGold -= buyPrice;
             itemAvailable--;
-            Debug.Log("this is itemAvaiable: " + itemAvailable);
-            Debug.Log("this is buyText: ", buyText);
-            GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyAmount + "  (" + itemAvailable + " left)";
+            PlayerController.playerItem++;
+            GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
         }
     }
 }
