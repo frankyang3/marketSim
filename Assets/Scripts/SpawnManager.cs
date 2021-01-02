@@ -26,14 +26,16 @@ public class SpawnManager : MonoBehaviour
         int right = Random.Range(0, 1);
         if (chance > 6)
         {
-            if (right == 1)
-            {
-                Instantiate(merchantTypes[0], new Vector3(80, 0, -20), merchantTypes[0].transform.rotation);
-            }
-            else
-            {
+            
+            Instantiate(merchantTypes[0], new Vector3(80, 0, -20), merchantTypes[0].transform.rotation);
+            /**GameObject merchant = (GameObject)Instantiate(merchantTypes[0], new Vector3(80, 0, -20), merchantTypes[0].transform.rotation);
+            BasicMerchant comp = merchant.GetComponent<BasicMerchant>();
+            comp.buyPrice = PlayerController.playerGold - Random.Range(0, 10);
+            comp.sellPrice = comp.buyPrice + Random.Range(1, 20);
+            comp.maxBuy = Random.Range(0, 100);
+            comp.maxSell = Random.Range(0, 100);
+            **/
 
-            }
         }
         // instantiate ball at random spawn location
         //Instantiate();
