@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public static int playerGold = 10;
     public static int playerItem = 3;
+<<<<<<< HEAD
 
     public int tradeBuyPrice = 3; // Values are here to test, should be removed later
     public int tradeSellPrice = 1;
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public int tradeMaxSell = 6;
     public GameObject buyButton;
 
+=======
+    public GameObject titleScreen;
+>>>>>>> a0128649e59b8e743622b905b40d754c05f6fa75
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             playerAnim.SetFloat("Speed_f", 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is false){
+            titleScreen.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is true)
+        {
+            titleScreen.SetActive(false);
         }
     }
 
