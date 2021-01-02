@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public GameObject titleScreen;
+    public GameObject gameOverScreen;
 
     private int time = 60;
     private int playerGold;
@@ -65,8 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //gameOverText.gameObject.SetActive(true); TODO: need adam to check
-        //restartButton.gameObject.SetActive(true); TODO: need adam to check
+        gameOverScreen.SetActive(true);
         isGameActive = false;
     }
 
