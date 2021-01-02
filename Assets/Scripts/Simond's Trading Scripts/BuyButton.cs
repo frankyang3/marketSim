@@ -20,6 +20,12 @@ public class BuyButton : MonoBehaviour
         
     }
 
+    public void UpdateBuyButton(int priceMerchant, int itemLimit)
+    {
+        buyPrice = priceMerchant;
+        itemAvailable = itemLimit;
+    }
+
     public void ReducePlayerGold()
     {
         if (itemAvailable > 0 && PlayerController.playerGold - buyPrice >= 0)

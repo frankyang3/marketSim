@@ -6,8 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     private Animator playerAnim;
     private GameManager gameManagerScript;
+
     public static int playerGold = 10;
     public static int playerItem = 3;
+
+    public int tradeBuyPrice = 3; // Values are here to test, should be removed later
+    public int tradeSellPrice = 1;
+    public int tradeMaxBuy = 4;
+    public int tradeMaxSell = 6;
+    public GameObject buyButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +38,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
+        tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
+        tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
+        tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
+
+        buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
+
         Debug.Log("HIT");
     }
 }
