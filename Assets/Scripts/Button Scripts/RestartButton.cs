@@ -13,7 +13,6 @@ public class RestartButton : MonoBehaviour
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         button = GetComponent<Button>();
-        button.onClick.AddListener(RestartGameButton);
     }
 
     // Update is called once per frame
@@ -22,8 +21,8 @@ public class RestartButton : MonoBehaviour
         
     }
     
-    void RestartGameButton()
+    void RestartGamebutton()
     {
-        gameManager.RestartGame();        
+
     }
 }
