@@ -436,6 +436,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 422704, guid: 6f52b946693e54048af74f5cd6ba49f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 422704, guid: 6f52b946693e54048af74f5cd6ba49f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f52b946693e54048af74f5cd6ba49f8, type: 3}
 --- !u!1 &500324132 stripped
@@ -455,8 +463,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.585464, y: 7.2182455, z: 1}
-  m_Center: {x: 0.07924843, y: 3.1091228, z: -2.380097e-16}
+  m_Size: {x: 27.58112, y: 7.2182455, z: 1}
+  m_Center: {x: -0.37035656, y: 3.1091228, z: 1.7103704e-15}
 --- !u!114 &500324136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,8 +2002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b735428168e2005429f59b1daeba3aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleScreen: {fileID: 0}
-  gameOverScreen: {fileID: 0}
 --- !u!114 &1839851066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2552,6 +2558,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   timerText: {fileID: 0}
   titleScreen: {fileID: 538046968}
+  gameOverScreen: {fileID: 0}
   isGameActive: 0
 --- !u!4 &2130937670
 Transform:
@@ -2574,6 +2581,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862623001572295177, guid: 163c068b7000b493c963f0fcc913743d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.8545227
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862623001572295177, guid: 163c068b7000b493c963f0fcc913743d,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.050594807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862623001572295177, guid: 163c068b7000b493c963f0fcc913743d,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1.6918276e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862623001572295177, guid: 163c068b7000b493c963f0fcc913743d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.99074
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862623001572295177, guid: 163c068b7000b493c963f0fcc913743d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.9953699
+      objectReference: {fileID: 0}
     - target: {fileID: 7862623001572295180, guid: 163c068b7000b493c963f0fcc913743d,
         type: 3}
       propertyPath: m_Name
