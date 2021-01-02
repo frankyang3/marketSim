@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class ExitButton : MonoBehaviour
 {
     private Button button;
-    public GameObject titleScreen;
-    public GameObject gameOverScreen;
     private GameManager gameManager;
 
     // Start is called before the first frame update
@@ -26,9 +24,8 @@ public class ExitButton : MonoBehaviour
 
     void ExitToTitle()
     {
-        gameManager.GameOver();
-        gameOverScreen.SetActive(false);
-        titleScreen.SetActive(true);       
+        gameManager.RestartGame();
+       
     }
 }
     
