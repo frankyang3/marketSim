@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public GameObject titleScreen;
+    public GameObject gameOverScreen;
 
     private int time = 60;
     private int playerGold;
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
 
             if (time < 0)
             {
-                //GameOver();
+                GameOver();
             }
             else
             {
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + playerGold;
         if (playerGold > 1000 || playerGold < 1)
         {
-            //gameOver();
+            GameOver();
         }
     }
 
@@ -65,8 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //gameOverText.gameObject.SetActive(true); TODO: need adam to check
-        //restartButton.gameObject.SetActive(true); TODO: need adam to check
+        gameOverScreen.SetActive(true);
         isGameActive = false;
     }
 

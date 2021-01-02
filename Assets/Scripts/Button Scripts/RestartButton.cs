@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExitButton : MonoBehaviour
+public class RestartButton : MonoBehaviour
 {
     private Button button;
-    public GameObject titleScreen;
-    public GameObject gameOverScreen;
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         button = GetComponent<Button>();
-        button.onClick.AddListener(ExitToTitle);
+        button.onClick.AddListener(RestartGameButton);
     }
 
     // Update is called once per frame
@@ -20,12 +21,9 @@ public class ExitButton : MonoBehaviour
     {
         
     }
-
-    void ExitToTitle()
+    
+    void RestartGameButton()
     {
-        Debug.Log("ada");
-        titleScreen.SetActive(true);
-        gameOverScreen.SetActive(false);
+        gameManager.RestartGame();        
     }
 }
-    
