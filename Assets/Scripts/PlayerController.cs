@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public int tradeSellPrice = 1;
     public int tradeMaxBuy = 4;
     public int tradeMaxSell = 6;
-    public GameObject buyButton;
+    public BuyButton buyButton;
     public GameObject titleScreen;
 
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnim = GetComponent<Animator>();
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+       
     }
 
     // Update is called once per frame
