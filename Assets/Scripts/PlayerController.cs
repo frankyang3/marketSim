@@ -9,17 +9,14 @@ public class PlayerController : MonoBehaviour
 
     public static int playerGold = 10;
     public static int playerItem = 3;
-<<<<<<< HEAD
 
     public int tradeBuyPrice = 3; // Values are here to test, should be removed later
     public int tradeSellPrice = 1;
     public int tradeMaxBuy = 4;
     public int tradeMaxSell = 6;
     public GameObject buyButton;
-
-=======
     public GameObject titleScreen;
->>>>>>> a0128649e59b8e743622b905b40d754c05f6fa75
+
     // Start is called before the first frame update
     void Start()
     {
