@@ -54,12 +54,11 @@ public class PlayerController : MonoBehaviour
         tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
 
         buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
-<<<<<<< HEAD
+
         gameManagerScript.isMovementActive = false;
-=======
+
         gameManagerScript.OpenTradeWindow();
 
->>>>>>> 28a94268932ef93b9aee498cbebcadf37cf1d72b
         Debug.Log("HIT");
     }
 }

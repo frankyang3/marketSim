@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
         tradeWindow.SetActive(true);
     }
 
+    public void HideTradeWindow()
+    {
+        tradeWindow.SetActive(false);
+    }
+
     IEnumerator KeepTime()
     {
         while (isGameActive)
