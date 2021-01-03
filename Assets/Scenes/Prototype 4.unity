@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -547,6 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c977bb24cb404fb47b87d5f652ae6833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tradeBuyPrice: 3
+  tradeSellPrice: 1
+  tradeMaxBuy: 4
+  tradeMaxSell: 6
+  buyButton: {fileID: 0}
   titleScreen: {fileID: 538046968}
 --- !u!1 &507614315
 GameObject:
@@ -1708,7 +1713,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 48484361}
         m_MethodName: IncreasePlayerGold
         m_Mode: 1
         m_Arguments:
@@ -2408,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e981410442991774a8e6855bfd229ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGoldText: {fileID: 0}
+  playerGoldText: {fileID: 1699965049}
 --- !u!114 &1699965049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3279,7 +3284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 48484362}
         m_MethodName: ReducePlayerGold
         m_Mode: 1
         m_Arguments:

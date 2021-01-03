@@ -7,6 +7,7 @@ public class GoldDisplay : MonoBehaviour
 {
     private int playerGold;
     public Text playerGoldText;
+
     // Start is called before the first frame update
     void Start()
     {
