@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935ad38760313b74193260d001897cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sellText: {fileID: 0}
+  sellText: {fileID: 1662914918}
 --- !u!114 &48484362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyText: {fileID: 0}
+  buyText: {fileID: 1436886857}
 --- !u!4 &48484363
 Transform:
   m_ObjectHideFlags: 0

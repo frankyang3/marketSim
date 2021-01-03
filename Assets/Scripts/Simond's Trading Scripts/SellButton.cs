@@ -11,19 +11,21 @@ public class SellButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Sell Button").GetComponentInChildren<Text>().text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
+        sellText = GameObject.Find("Sell Button").GetComponentInChildren<Text>();
+        sellText.text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject.Find("Sell Button").GetComponentInChildren<Text>().text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
+        
     }
 
     public void UpdateSellButton(int merchantSellPrice, int itemLimit)
     {
         sellPrice = merchantSellPrice;
         amountBuying = itemLimit;
+        sellText.text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
     }
 
     public void IncreasePlayerGold()
