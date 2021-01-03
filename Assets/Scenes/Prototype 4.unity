@@ -3526,6 +3526,7 @@ MonoBehaviour:
   timerText: {fileID: 1976917935}
   titleScreen: {fileID: 538046968}
   gameOverScreen: {fileID: 1947465335}
+  tradeWindow: {fileID: 1585046430}
   isGameActive: 0
 --- !u!4 &2130937670
 Transform:
