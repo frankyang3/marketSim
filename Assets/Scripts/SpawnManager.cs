@@ -5,9 +5,11 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] merchantTypes;
+    private GameManager gameManagerScript;
     // Start is called before the first frame update
     void Start()
     {
+        gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
         InvokeRepeating("SpawnMerchant", 4.0f, 1.0f);
     }
 
@@ -24,49 +26,10 @@ public class SpawnManager : MonoBehaviour
         int chance = Random.Range(0, 10);
         //generate merchant on left or right side
         int right = Random.Range(0, 1);
-        if (chance > 6)
+        if (chance > 6 && gameManagerScript.isGameActive && gameManagerScript.isMovementActive )
         {
-            
             Instantiate(merchantTypes[0], new Vector3(80, 0, -20), merchantTypes[0].transform.rotation);
-            /**GameObject merchant = (GameObject)Instantiate(merchantTypes[0], new Vector3(80, 0, -20), merchantTypes[0].transform.rotation);
-            BasicMerchant comp = merchant.GetComponent<BasicMerchant>();
-            comp.buyPrice = PlayerController.playerGold - Random.Range(0, 10);
-            comp.sellPrice = comp.buyPrice + Random.Range(1, 20);
-            comp.maxBuy = Random.Range(0, 100);
-            comp.maxSell = Random.Range(0, 100);
-            **/
-
         }
-        // instantiate ball at random spawn location
-        //Instantiate();
+
     }
 }
-
-/**
- * 
- *  private float spawnLimitXLeft = -22;
-    private float spawnLimitXRight = 7;
-    private float spawnPosY = 30;
-
-    private float startDelay = 1.0f;
-    private float spawnInterval = 4.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
-    }
-
-    // Spawn random ball at random x position at top of play area
-    void SpawnRandomBall ()
-    {
-        // Generate random ball index and random spawn position
-        Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
-        spawnInterval = Random.Range(3, 5);
-        // instantiate ball at random spawn location
-        Instantiate(ballPrefabs[Random.Range(0,3)], spawnPos, ballPrefabs[0].transform.rotation);
-    }
- * 
- * 
- * 
- */

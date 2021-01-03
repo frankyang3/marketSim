@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManagerScript.isGameActive == true)
+        if (gameManagerScript.isGameActive == true && gameManagerScript.isMovementActive )
         {
             playerAnim.SetFloat("Speed_f", 1.0f);
         }
@@ -55,7 +55,13 @@ public class PlayerController : MonoBehaviour
         tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
 
         buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
+
+
+        gameManagerScript.isMovementActive = false;
+
+
         sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
+
         gameManagerScript.OpenTradeWindow();
 
         Debug.Log("HIT");

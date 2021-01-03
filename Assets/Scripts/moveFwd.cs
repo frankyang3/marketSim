@@ -10,15 +10,15 @@ public class moveFwd : MonoBehaviour
     void Start()
     {
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManagerScript.isGameActive == true)
+        if (gameManagerScript.isGameActive == true && gameManagerScript.isMovementActive)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
+
         }
     }
 }
