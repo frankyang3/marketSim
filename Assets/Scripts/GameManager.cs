@@ -22,11 +22,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         tradeWindow.SetActive(false);
-        timerText.
+        timerText.enabled = false;
     }
 
     public void StartGame()
     {
+        timerText.enabled = true;
         isMovementActive = true;
         isGameActive = true;
         titleScreen.SetActive(false);

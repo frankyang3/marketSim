@@ -7,24 +7,30 @@ public class GoldDisplay : MonoBehaviour
 {
     private int playerGold;
     public Text playerGoldText;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerGoldText.enabled = false;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerGold = PlayerController.playerGold;
-
-        playerGoldText.text = "Gold: " + playerGold;
-
-        // Testing if its changable
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(gameManager.isGameActive is true)
         {
-            PlayerController.playerGold--;
-        }
+            playerGoldText.enabled = true;
+            playerGold = PlayerController.playerGold;
+
+            playerGoldText.text = "Gold: " + playerGold;
+
+            // Testing if its changable
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                PlayerController.playerGold--;
+            }
+        }      
     }
 }
