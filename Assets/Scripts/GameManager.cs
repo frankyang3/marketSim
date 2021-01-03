@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         tradeWindow.SetActive(false);
+        timerText.
     }
 
     public void StartGame()
@@ -67,7 +68,10 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer(int timeRemaining)
     {
-        timerText.text = "Time: " + timeRemaining;
+        if (isGameActive)
+        {
+            timerText.text = "Time: " + timeRemaining;
+        }
     }
 
     public void GameOver()
