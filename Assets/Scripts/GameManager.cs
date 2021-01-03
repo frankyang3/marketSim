@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+    public GameObject tradeWindow;
 
     private int time = 60;
     private int playerGold;
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tradeWindow.SetActive(false);
     }
 
     public void StartGame()
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour
         titleScreen.SetActive(false);
         UpdateTimer(time);
         StartCoroutine(KeepTime());
+    }
+
+    public void OpenTradeWindow()
+    {
+        tradeWindow.SetActive(true);
     }
 
     IEnumerator KeepTime()
