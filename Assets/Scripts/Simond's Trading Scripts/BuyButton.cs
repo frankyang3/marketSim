@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BuyButton : MonoBehaviour
 {
-    private int buyPrice = 0; // later use get component of the trader and change to private
-    private int itemAvailable = 0; // later take the items available from the trader and change to private
+    public int buyPrice; // later use get component of the trader and change to private
+    public int itemAvailable; // later take the items available from the trader and change to private
     public Text buyText;
     // public string itemName;
 
@@ -14,6 +14,8 @@ public class BuyButton : MonoBehaviour
     {
         buyText = GameObject.Find("Buy Button").GetComponentInChildren<Text>();
         buyText.text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
+        Button btn = gameObject.GetComponent<Button>();
+        btn.onClick.AddListener(ReducePlayerGold);
     }
 
     private void Update()

@@ -13,6 +13,8 @@ public class SellButton : MonoBehaviour
     {
         sellText = GameObject.Find("Sell Button").GetComponentInChildren<Text>();
         sellText.text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
+        Button btn = gameObject.GetComponent<Button>();
+        btn.onClick.AddListener(IncreasePlayerGold);
     }
 
     // Update is called once per frame

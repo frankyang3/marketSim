@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyPrice: 0
+  itemAvailable: 0
   buyText: {fileID: 1436886857}
 --- !u!4 &48484363
 Transform:
@@ -1713,18 +1715,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1073796404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 48484361}
-        m_MethodName: IncreasePlayerGold
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1073796404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3244,6 +3235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyPrice: 0
+  itemAvailable: 0
   buyText: {fileID: 1436886857}
 --- !u!114 &2017308418
 MonoBehaviour:
@@ -3284,18 +3277,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2017308419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 48484362}
-        m_MethodName: ReducePlayerGold
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2017308419
 MonoBehaviour:
   m_ObjectHideFlags: 0
