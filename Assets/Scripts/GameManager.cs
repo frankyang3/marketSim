@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private int playerGold;
 
     public bool isGameActive;
-
+    public bool isMovementActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        isMovementActive = true;
         isGameActive = true;
         titleScreen.SetActive(false);
         UpdateTimer(time);
