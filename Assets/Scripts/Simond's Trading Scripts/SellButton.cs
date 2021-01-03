@@ -20,6 +20,12 @@ public class SellButton : MonoBehaviour
         
     }
 
+    public void UpdateSellButton(int merchantSellPrice, int itemLimit)
+    {
+        sellPrice = merchantSellPrice;
+        amountBuying = itemLimit;
+    }
+
     public void IncreasePlayerGold()
     {
         if (PlayerController.playerItem > 0 && amountBuying > 0)
