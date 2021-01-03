@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BuyButton : MonoBehaviour
 {
-    private int buyPrice = 3; // later use get component of the trader and change to private
-    private int itemAvailable = 4; // later take the items available from the trader and change to private
+    private int buyPrice; // later use get component of the trader and change to private
+    private int itemAvailable; // later take the items available from the trader and change to private
     public Text buyText;
     // public string itemName;
 
@@ -17,13 +17,14 @@ public class BuyButton : MonoBehaviour
 
     private void Update()
     {
-        
+        GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
     }
 
     public void UpdateBuyButton(int priceMerchant, int itemLimit)
     {
         buyPrice = priceMerchant;
         itemAvailable = itemLimit;
+
     }
 
     public void ReducePlayerGold()

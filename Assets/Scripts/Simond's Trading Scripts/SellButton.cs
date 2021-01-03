@@ -17,7 +17,7 @@ public class SellButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject.Find("Sell Button").GetComponentInChildren<Text>().text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
     }
 
     public void UpdateSellButton(int merchantSellPrice, int itemLimit)
