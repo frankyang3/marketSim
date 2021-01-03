@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -142,8 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935ad38760313b74193260d001897cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
+  sellText: {fileID: 0}
 --- !u!114 &48484362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
+  buyText: {fileID: 0}
 --- !u!4 &48484363
 Transform:
   m_ObjectHideFlags: 0
@@ -1423,7 +1421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905169a5b18544c459c08d3ec254ab1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
 --- !u!114 &889786836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,7 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935ad38760313b74193260d001897cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
+  sellText: {fileID: 1662914918}
 --- !u!114 &1073796403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2396,7 +2393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 635.19116, y: 102.80876}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1699965048
@@ -2411,7 +2408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e981410442991774a8e6855bfd229ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
+  playerGoldText: {fileID: 0}
 --- !u!114 &1699965049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3241,7 +3238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
+  buyText: {fileID: 1436886857}
 --- !u!114 &2017308418
 MonoBehaviour:
   m_ObjectHideFlags: 0
