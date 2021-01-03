@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         tradeWindow.SetActive(false);
+        timerText.enabled = false;
     }
 
     public void StartGame()
     {
+        timerText.enabled = true;
         isMovementActive = true;
         isGameActive = true;
         titleScreen.SetActive(false);
@@ -73,7 +75,10 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer(int timeRemaining)
     {
-        timerText.text = "Time: " + timeRemaining;
+        if (isGameActive)
+        {
+            timerText.text = "Time: " + timeRemaining;
+        }
     }
 
     public void GameOver()
