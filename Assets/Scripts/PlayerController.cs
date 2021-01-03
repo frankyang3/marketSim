@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int tradeMaxBuy = 4;
     public int tradeMaxSell = 6;
     public BuyButton buyButton;
+    public SellButton sellButton;
     public GameObject titleScreen;
 
     // Start is called before the first frame update
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
         tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
 
         buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
+        sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
         gameManagerScript.OpenTradeWindow();
 
         Debug.Log("HIT");

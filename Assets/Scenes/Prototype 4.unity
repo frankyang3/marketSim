@@ -551,7 +551,8 @@ MonoBehaviour:
   tradeSellPrice: 1
   tradeMaxBuy: 4
   tradeMaxSell: 6
-  buyButton: {fileID: 0}
+  buyButton: {fileID: 2017308417}
+  sellButton: {fileID: 1073796402}
   titleScreen: {fileID: 538046968}
 --- !u!1 &507614315
 GameObject:
