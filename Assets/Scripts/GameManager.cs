@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject tradeWindow;
 
-    private int time = 60;
+    private int time = 300;
     private int playerGold;
 
     public bool isGameActive;
