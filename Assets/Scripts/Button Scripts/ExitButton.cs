@@ -25,7 +25,6 @@ public class ExitButton : MonoBehaviour
     void ExitToTitle()
     {
         gameManager.RestartGame();
-       
     }
 }
     

@@ -12,17 +12,17 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject tradeWindow;
-    private GameObject victoryScreen; 
+    public GameObject victoryScreen; 
 
     private int time = 300;
     private int playerGold;
+    private int playerItem;
 
     public bool isGameActive;
     public bool isMovementActive;
     // Start is called before the first frame update
     void Start()
     {
-       victoryScreen = GameObject.Find("Victory Screen");
         tradeWindow.SetActive(false);
         timerText.enabled = false;
     }
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
             if (time < 0)
             {
-                GameOver();
+                GameOver(false);
             }
             else
             {
@@ -69,13 +69,14 @@ public class GameManager : MonoBehaviour
     {
 
         playerGold = PlayerController.playerGold;
-        if (playerGold < 1)
+        playerItem = PlayerController.playerItem;
+        if (playerGold < 3 && playerItem < 1)
         {
-            GameOver();
+            GameOver(false);
         }
-        if(playerGold > 1000)
+        else if(playerGold >= 1000)
         {
-            Victory();
+            GameOver(true);
         }
     }
 
@@ -87,9 +88,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void GameOver(bool is_win)
     {
-        gameOverScreen.SetActive(true);
+        tradeWindow.SetActive(false);
+        if (is_win)
+        {
+            victoryScreen.SetActive(true);
+        }
+        else
+        {
+            gameOverScreen.SetActive(true);
+        }
         isGameActive = false;
     }
 
@@ -103,11 +112,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private void Victory()
-    {       
-        victoryScreen.SetActive(true);
-        isGameActive = false;
+        PlayerController.playerGold = 10;
+        PlayerController.playerItem = 3;
     }
 }

@@ -8,9 +8,13 @@ public class SellButton : MonoBehaviour
     private int sellPrice = 1;
     private int amountBuying = 6;
     public Text sellText;
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         sellText = GameObject.Find("Sell Button").GetComponentInChildren<Text>();
         sellText.text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
         Button btn = gameObject.GetComponent<Button>();
@@ -39,5 +43,6 @@ public class SellButton : MonoBehaviour
             amountBuying--;
             GameObject.Find("Sell Button").GetComponentInChildren<Text>().text = "Sell for $" + sellPrice + "  (Amount willing to buy " + amountBuying + ")";
         }
+        gameManager.UpdateScore();
     }
 }

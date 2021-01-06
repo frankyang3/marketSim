@@ -8,10 +8,13 @@ public class BuyButton : MonoBehaviour
     public int buyPrice; // later use get component of the trader and change to private
     public int itemAvailable; // later take the items available from the trader and change to private
     public Text buyText;
+    private GameManager gameManager;
     // public string itemName;
 
     private void Start()
     {
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         buyText = GameObject.Find("Buy Button").GetComponentInChildren<Text>();
         buyText.text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
         Button btn = gameObject.GetComponent<Button>();
@@ -34,6 +37,7 @@ public class BuyButton : MonoBehaviour
     public void ReducePlayerGold()
     {
         Debug.Log("BuyPrice" + buyPrice);
+
         if (itemAvailable > 0 && PlayerController.playerGold - buyPrice >= 0)
         {
             PlayerController.playerGold -= buyPrice;
@@ -41,5 +45,6 @@ public class BuyButton : MonoBehaviour
             PlayerController.playerItem++;
             GameObject.Find("Buy Button").GetComponentInChildren<Text>().text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
         }
+        gameManager.UpdateScore();
     }
 }
