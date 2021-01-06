@@ -18,11 +18,7 @@ public class BasicMerchant : MonoBehaviour
     {
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-<<<<<<< HEAD
-        buyPrice = CheckNegativeGold(PlayerController.playerGold - Random.Range(0, 10));
-=======
         buyPrice =  Random.Range(3, 10);
->>>>>>> f7715ec96a4b2f715e04cab9f29bd926a83c3cd6
         sellPrice = CheckNegativeGold(buyPrice - Random.Range(1, 10));
         maxBuy = Random.Range(0, 10);
         maxSell = Random.Range(0, 10);
