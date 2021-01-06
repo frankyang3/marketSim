@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
-        if(playerGold > 1000)
+        if(playerGold > 20)
         {
             Victory();
         }
