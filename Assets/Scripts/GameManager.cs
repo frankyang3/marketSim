@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject tradeWindow;
+    private GameObject victoryScreen; 
 
     private int time = 300;
     private int playerGold;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       victoryScreen = GameObject.Find("Victory Screen");
         tradeWindow.SetActive(false);
         timerText.enabled = false;
     }
@@ -65,11 +67,15 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
+
         playerGold = PlayerController.playerGold;
-        scoreText.text = "Score: " + playerGold;
-        if (playerGold > 1000 || playerGold < 1)
+        if (playerGold < 1)
         {
             GameOver();
+        }
+        if(playerGold > 1000)
+        {
+            Victory();
         }
     }
 
@@ -99,4 +105,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    private void Victory()
+    {       
+        victoryScreen.SetActive(true);
+        isGameActive = false;
+    }
 }
