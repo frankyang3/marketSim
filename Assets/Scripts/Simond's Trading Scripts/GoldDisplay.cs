@@ -12,6 +12,7 @@ public class GoldDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         playerGoldText.enabled = false;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
@@ -23,7 +24,6 @@ public class GoldDisplay : MonoBehaviour
         {
             playerGoldText.enabled = true;
             playerGold = PlayerController.playerGold;
-
             playerGoldText.text = "Gold: " + playerGold;
 
             // Testing if its changable
