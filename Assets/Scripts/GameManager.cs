@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     public GameObject victoryScreen; 
 
     private int time = 300;
-    private int playerGold;
-    private int playerItem;
 
     public bool isGameActive;
     public bool isMovementActive;
@@ -68,13 +66,12 @@ public class GameManager : MonoBehaviour
     public void UpdateScore()
     {
 
-        playerGold = PlayerController.playerGold;
-        playerItem = PlayerController.playerItem;
-        if (playerGold < 3 && playerItem < 1)
+        
+        if (PlayerController.playerGold < 3 && PlayerController.playerItem < 1)
         {
             GameOver(false);
         }
-        else if(playerGold >= 1000)
+        else if(PlayerController.playerGold >= 1000)
         {
             GameOver(true);
         }
