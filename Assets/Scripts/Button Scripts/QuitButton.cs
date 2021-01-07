@@ -21,7 +21,6 @@ public class QuitButton : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        Debug.Log("quit");
         Application.Quit();
     }
 }

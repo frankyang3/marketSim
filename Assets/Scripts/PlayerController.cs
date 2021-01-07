@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if game is running and not paused, then makes guy move 
         if (gameManagerScript.isGameActive == true && gameManagerScript.isMovementActive )
         {
             playerAnim.SetFloat("Speed_f", 1.0f);
@@ -49,13 +50,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //get prices from merchant hit
         tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
         tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
         tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
         tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
 
-        Debug.Log(tradeBuyPrice);
-
+        //send prices to buttons
         buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
 
         sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);

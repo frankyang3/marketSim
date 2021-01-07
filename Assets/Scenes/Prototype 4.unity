@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,66 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &48484360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 48484363}
-  - component: {fileID: 48484362}
-  - component: {fileID: 48484361}
-  m_Layer: 0
-  m_Name: TradeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &48484361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48484360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 935ad38760313b74193260d001897cfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sellText: {fileID: 1662914918}
---- !u!114 &48484362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48484360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14a36b08d2826b44abce6b21aa6ad9f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyPrice: 0
-  itemAvailable: 0
-  buyText: {fileID: 1436886857}
---- !u!4 &48484363
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48484360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 305.5268, y: 170.23994, z: 486.03513}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &143100273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1703,6 @@ GameObject:
   - component: {fileID: 1061143056}
   - component: {fileID: 1061143059}
   - component: {fileID: 1061143058}
-  - component: {fileID: 1061143057}
   - component: {fileID: 1061143060}
   m_Layer: 5
   m_Name: PlayerItems
@@ -1791,19 +1730,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -38}
   m_SizeDelta: {x: 635.19116, y: 102.80876}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1061143057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061143055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e981410442991774a8e6855bfd229ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerGoldText: {fileID: 0}
 --- !u!114 &1061143058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,7 +1782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5697ef6f632fbae41b5978ee4ab93c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerItemText: {fileID: 0}
+  playerItemText: {fileID: 1061143058}
 --- !u!1 &1073796400
 GameObject:
   m_ObjectHideFlags: 0

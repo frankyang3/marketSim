@@ -20,7 +20,7 @@ public class ItemDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive is true)
+        if (gameManager.isGameActive)
         {
             playerItemText.enabled = true;
             playerItem = PlayerController.playerItem;
