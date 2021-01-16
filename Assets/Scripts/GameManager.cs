@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         timerText.enabled = false;
     }
 
+    /** Starts the game, setting various displays to true 
+     starts keeping time for the timer */
     public void StartGame()
     {
         timerText.enabled = true;
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
         tradeWindow.SetActive(false);
     }
 
+    /** function to keep track of the time asynchonously */
     IEnumerator KeepTime()
     {
         while (isGameActive)
@@ -66,8 +69,8 @@ public class GameManager : MonoBehaviour
     public void UpdateScore()
     {
 
-        
-        if (PlayerController.playerGold < 3 && PlayerController.playerItem < 1)
+
+        if (PlayerController.playerGold < 3 && PlayerController.playerItems == new int[]{ })
         {
             GameOver(false);
         }
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /** updates the text of the timer in the display */
     public void UpdateTimer(int timeRemaining)
     {
         if (isGameActive)
@@ -102,7 +106,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is false)
+        {
+            titleScreen.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is true)
+        {
+            titleScreen.SetActive(false);
+        }
     }
 
     // Restart game by reloading the scene
@@ -110,6 +121,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         PlayerController.playerGold = 10;
-        PlayerController.playerItem = 3;
+        PlayerController.playerItems = new int[] { };
     }
 }

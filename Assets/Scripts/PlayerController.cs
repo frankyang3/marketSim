@@ -8,22 +8,21 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManagerScript;
 
     public static int playerGold = 10;
-    public static int playerItem = 3;
+    //public static int playerItem = 3;
+    public static int[] playerItems = { };
 
-    public int tradeBuyPrice = 3; // Values are here to test, should be removed later
-    public int tradeSellPrice = 1;
-    public int tradeMaxBuy = 4;
-    public int tradeMaxSell = 6;
-    public BuyButton buyButton;
-    public SellButton sellButton;
-    public GameObject titleScreen;
+    //public int tradeBuyPrice = 3; // Values are here to test, should be removed later
+    //public int tradeSellPrice = 1;
+    //public int tradeMaxBuy = 4;
+    //public int tradeMaxSell = 6;
+    //public BuyButton buyButton;
+    //public SellButton sellButton;
 
     // Start is called before the first frame update
     void Start()
     {
         playerAnim = GetComponent<Animator>();
         gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
-       
     }
 
     // Update is called once per frame
@@ -38,31 +37,25 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetFloat("Speed_f", 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is false){
-            titleScreen.SetActive(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && titleScreen.activeSelf is true)
-        {
-            titleScreen.SetActive(false);
-        }
+        
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
-        tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
-        tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
-        tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
+    //    tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
+    //    tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
+    //    tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
 
-        Debug.Log(tradeBuyPrice);
+    //    Debug.Log(tradeBuyPrice);
 
-        buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
+    //    buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
 
-        sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
+    //    sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
 
 
-        gameManagerScript.isMovementActive = false;
-        gameManagerScript.OpenTradeWindow();
+    //    gameManagerScript.isMovementActive = false;
+    //    gameManagerScript.OpenTradeWindow();
 
-    }
+    //}
 }
