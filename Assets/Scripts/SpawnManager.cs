@@ -21,6 +21,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnMerchant()
     {
+        //generates merchant from invoke repeating, rng if >6 then we spawn
         
         //try to generate merchant chnace
         int chance = Random.Range(0, 10);
