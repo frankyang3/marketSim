@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 7862623001572793900}
   - component: {fileID: 7862623001565016524}
   - component: {fileID: 7862623001572295177}
-  - component: {fileID: 7862623001572295183}
   - component: {fileID: 7862623001572295182}
   m_Layer: 0
   m_Name: BasicMerchant
@@ -306,18 +305,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7862623001572295183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862623001572295180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90826aabeb3a4484cb707c66df4e468e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7862623001572295182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90826aabeb3a4484cb707c66df4e468e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyPrice: 0
+  sellPrice: 0
+  maxBuy: 0
+  maxSell: 0
 --- !u!1 &7862623001572295184
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class moveFwd : MonoBehaviour
 {
-    //moves the object forward, attached to backgrounds, but NOT merchant enemies
     private float speed = 15;
     private GameManager gameManagerScript;
     // Start is called before the first frame update
