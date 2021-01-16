@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-<<<<<<< HEAD
         if (other.gameObject.CompareTag("Basic Merchant"))
         {
             tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
@@ -66,22 +65,6 @@ public class PlayerController : MonoBehaviour
             gameManagerScript.isMovementActive = false;
             gameManagerScript.OpenTradeWindow();
         }              
-=======
-        //get prices from merchant hit
-        tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
-        tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
-        tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
-        tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
-
-        //send prices to buttons
-        buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
-
-        sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
-
-
-        gameManagerScript.isMovementActive = false;
-        gameManagerScript.OpenTradeWindow();
->>>>>>> b077619b6134a1cda08f3d53f6cdaa2a913c7111
 
         else if (other.gameObject.CompareTag("Rare Merchant"))
         {
