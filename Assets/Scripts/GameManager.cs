@@ -12,9 +12,10 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject tradeWindow;
-    public GameObject victoryScreen; 
+    public GameObject victoryScreen;
+    public GameObject timeWindow;
 
-    private int time = 300;
+    public int time = 300;
 
     public bool isGameActive;
     public bool isMovementActive;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         tradeWindow.SetActive(false);
+        timeWindow.SetActive(false);
         timerText.enabled = false;
     }
 
@@ -35,6 +37,16 @@ public class GameManager : MonoBehaviour
         titleScreen.SetActive(false);
         UpdateTimer(time);
         StartCoroutine(KeepTime());
+    }
+
+    public void OpenTimeWindow()
+    {
+        timeWindow.SetActive(true);
+    }
+
+    public void HideTimeWindow()
+    {
+        timeWindow.SetActive(false);
     }
 
     public void OpenTradeWindow()

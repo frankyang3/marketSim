@@ -22,6 +22,7 @@ public class ExitButton : MonoBehaviour
         
     }
 
+    // Stops game and reloads scene at main menu
     void ExitToTitle()
     {
         gameManager.RestartGame();

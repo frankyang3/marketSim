@@ -31,12 +31,10 @@ public class BuyButton : MonoBehaviour
         buyPrice = priceMerchant;
         itemAvailable = itemLimit;
         buyText.text = "Buy for $" + buyPrice + "  (" + itemAvailable + " left)";
-        Debug.Log("INSIDE HERE" + buyPrice);
     }
 
     public void ReducePlayerGold()
     {
-        Debug.Log("BuyPrice" + buyPrice);
 
         if (itemAvailable > 0 && PlayerController.playerGold - buyPrice >= 0)
         {

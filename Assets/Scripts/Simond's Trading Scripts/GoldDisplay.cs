@@ -20,17 +20,12 @@ public class GoldDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameManager.isGameActive is true)
+        if(gameManager.isGameActive)
         {
-            playerGoldText.enabled = true;
-            playerGold = PlayerController.playerGold;
-            playerGoldText.text = "Gold: " + playerGold;
+             playerGoldText.enabled = true;
+             playerGold = PlayerController.playerGold;
+             playerGoldText.text = "Gold: " + playerGold;
 
-            // Testing if its changable
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                PlayerController.playerGold--;
-            }
         }      
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicMerchant : MonoBehaviour
 {
+    //has its own speed, and prices
     private float speed = 15;
     private GameManager gameManagerScript;
 
@@ -39,6 +40,7 @@ public class BasicMerchant : MonoBehaviour
 
     }
 
+    // checks for negative gold, returns true or false
     private int CheckNegativeGold(int currentBuyPrice)
     {
         if (currentBuyPrice < 1)

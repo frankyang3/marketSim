@@ -22,6 +22,7 @@ public class StartButton : MonoBehaviour
        
     }
 
+    // Starts a new run
     void Begin()
     {
         gameManager.StartGame();
