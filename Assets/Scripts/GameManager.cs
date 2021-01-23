@@ -76,9 +76,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void UpdateScore()
-    {
-
-        
+    {      
         if (PlayerController.playerGold < 3 && PlayerController.playerItem < 1)
         {
             GameOver(false);
