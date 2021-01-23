@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public int tradeSellPrice = 1;
     public int tradeMaxBuy = 4;
     public int tradeMaxSell = 6;
+
     public BuyTimeButton buyTimeButton;
     public BuyButton buyButton;
     public SellButton sellButton;
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     //private void OnTriggerEnter(Collider other)
     //{
     //    tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
@@ -75,6 +77,9 @@ public class PlayerController : MonoBehaviour
     //}
 =======
     private void OnTriggerEnter(Collider other)
+=======
+    private void OnTriggerEnter(Collider other) //checks merchant type and generates values accordingly
+>>>>>>> 16c7d4b404710b9d50d1b4e963d8d12edd3eedac
     {
         if (other.gameObject.CompareTag("Basic Merchant"))
         {
