@@ -25,14 +25,14 @@ public class BuyTimeButton : MonoBehaviour
         
     }
 
-    public void UpdateBuyTimeButton(int timeX, int priceX)
+    public void UpdateBuyTimeButton(int timeX, int priceX) //generates a unique button for the rare merchant 
     {
         time = timeX;
         timePrice = priceX;
         buyTimeText.text = "Buy" + time + "seconds for $" + timePrice + "?";
     }
 
-    public void AddTime()
+    public void AddTime() //Adds time to the players clock if they have enough gold to buy it
     {   
         if (PlayerController.playerGold >= 15)
         {
