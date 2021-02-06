@@ -28,8 +28,14 @@ public class SpawnManager : MonoBehaviour
         //generate merchant on left or right side
         int right = Random.Range(0, 1);
         //generate random type of merchant
-        int merch_type = Random.Range(0, merchantTypes.Length);
-
+        int merch_type = Random.Range(0, 10);
+        if (merch_type == 9) {
+            merch_type = 1;
+        }
+        else
+        {
+            merch_type = 0;
+        }           
         if (chance > 6 && gameManagerScript.isGameActive && gameManagerScript.isMovementActive )
         {
             Instantiate(merchantTypes[merch_type], new Vector3(80, 0, -20), merchantTypes[merch_type].transform.rotation);
