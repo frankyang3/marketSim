@@ -35,10 +35,11 @@ public class SpawnManager : MonoBehaviour
         else
         {
             merch_type = 0;
-        }           
+        }
+        
         if (chance > 6 && gameManagerScript.isGameActive && gameManagerScript.isMovementActive )
         {
-            Instantiate(merchantTypes[merch_type], new Vector3(80, 0, -20), merchantTypes[merch_type].transform.rotation);
+            Instantiate(merchantTypes[merch_type], new Vector3(355, 0, -20), merchantTypes[merch_type].transform.rotation);
         }
 
     }

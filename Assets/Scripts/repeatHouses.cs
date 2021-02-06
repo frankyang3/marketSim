@@ -17,10 +17,10 @@ public class repeatHouses : MonoBehaviour
         {
             if (transform.position.z > 10)
             {
-                transform.position = new Vector3(225f, 0f, 21f);
+                transform.position = new Vector3(388f, 0f, 21f);
             }else
             {
-                transform.position = new Vector3(245f, 0f, -33f);
+                transform.position = new Vector3(388f, 0f, -33f);
             }
         }
         
