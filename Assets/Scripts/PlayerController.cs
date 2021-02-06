@@ -8,17 +8,9 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManagerScript;
 
     public static int playerGold = 10;
-    //public static int playerItem = 3;
+    public static int playerItem = 3;
     public static int[] playerItems = { };
 
-<<<<<<< HEAD
-    //public int tradeBuyPrice = 3; // Values are here to test, should be removed later
-    //public int tradeSellPrice = 1;
-    //public int tradeMaxBuy = 4;
-    //public int tradeMaxSell = 6;
-    //public BuyButton buyButton;
-    //public SellButton sellButton;
-=======
     public int time;
     public int timePrice;
     public int tradeBuyPrice = 3; // Values are here to test, should be removed later
@@ -30,7 +22,6 @@ public class PlayerController : MonoBehaviour
     public BuyButton buyButton;
     public SellButton sellButton;
     public GameObject titleScreen;
->>>>>>> 6a124ec9ecc008559eeaa0456251a617aaedaca3
 
     // Start is called before the first frame update
     void Start()
@@ -55,31 +46,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    tradeBuyPrice = other.gameObject.GetComponent<BasicMerchant>().buyPrice;
-    //    tradeSellPrice = other.gameObject.GetComponent<BasicMerchant>().sellPrice;
-    //    tradeMaxBuy = other.gameObject.GetComponent<BasicMerchant>().maxBuy;
-    //    tradeMaxSell = other.gameObject.GetComponent<BasicMerchant>().maxSell;
-
-    //    Debug.Log(tradeBuyPrice);
-
-    //    buyButton.UpdateBuyButton(tradeBuyPrice, tradeMaxBuy);
-
-    //    sellButton.UpdateSellButton(tradeSellPrice, tradeMaxSell);
-
-
-    //    gameManagerScript.isMovementActive = false;
-    //    gameManagerScript.OpenTradeWindow();
-
-    //}
-=======
-    private void OnTriggerEnter(Collider other)
-=======
     private void OnTriggerEnter(Collider other) //checks merchant type and generates values accordingly
->>>>>>> 16c7d4b404710b9d50d1b4e963d8d12edd3eedac
     {
         if (other.gameObject.CompareTag("Basic Merchant"))
         {
@@ -103,5 +70,4 @@ public class PlayerController : MonoBehaviour
             gameManagerScript.OpenTimeWindow();
         }     
     }
->>>>>>> 6a124ec9ecc008559eeaa0456251a617aaedaca3
 }

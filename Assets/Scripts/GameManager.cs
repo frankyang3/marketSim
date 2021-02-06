@@ -79,15 +79,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void UpdateScore()
-<<<<<<< HEAD
-    {
 
-
-        if (PlayerController.playerGold < 3 && PlayerController.playerItems == new int[]{ })
-=======
     {      
         if (PlayerController.playerGold < 3 && PlayerController.playerItem < 1)
->>>>>>> 16c7d4b404710b9d50d1b4e963d8d12edd3eedac
         {
             GameOver(false);
         }
